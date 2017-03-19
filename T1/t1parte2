@@ -1,0 +1,43 @@
+# 1. Escreva uma função que receba uma lista de nomes e retorne uma lista
+# com a string "Sr. " adicionada ao início de cada nome.
+
+def atribui_sr(lista):
+    return list(map(lambda palavra: 'Sr.' + palavra, lista))
+
+# 2. Escreva uma função que, dada uma lista de números, calcule 3n*2 + 2/n + 1 para cada número n da lista.
+
+def recebe_lista (n):
+    return list(map(lambda n: 3*n*2 + 2/n + 1, n))
+
+# 3. Crie uma função que receba uma lista de nomes e retorne outra lista com somente aqueles nomes
+# que terminarem com a letra 'a'.
+
+def localiza(lista):
+    return list(filter(lambda lista: lista[-1] == 'a', lista))
+
+# 4. Escreva uma função que, dada uma lista de idades de pessoas no ano atual, retorne uma lista
+# somente com as idades de quem nasceu depois de 1970. Para testar a condição, sua função deverá
+# subtrair a idade do ano atual. Exemplo de uso:
+
+def anos(pessoa):
+    return list(filter(lambda pessoa: 2017 - pessoa > 1970, pessoa))
+
+# 5. O código abaixo é escrito em Python imperativo. Escreva um código equivalente usando programação funcional.
+
+def multiplica(numbers):
+    return list(map(lambda numbers: numbers * 2, numbers))
+
+#main
+
+def main():
+    lista = ['Idle', 'Chapman', ' ', 'Cleese', 'Palin', 'Jones']
+    print(atribui_sr(lista))
+    lista_num = [ 1 , 2 , 3 , 4 , 5 ]
+    print(recebe_lista(lista_num))
+    print(localiza(lista))
+    lista_idades = [20, 50, 89, 37, 18, 15]
+    print(anos(lista_idades))
+    numbers = [1, 2, 3, 4]
+    print(multiplica(numbers))
+
+main()
