@@ -1,0 +1,75 @@
+#1. Defina uma função addSuffix(suf,nomes) que retorne a lista de nomes com o sufixo suf adicionado
+def addSuffix(suf, nomes):
+    return [x + suf for x in nomes]
+
+#2. Escreva uma função countShorts(words), que receba uma lista de palavras e retorne a quantidade
+# de palavras dessa lista que possuem menos de 5 caracteres.
+def countShorts(words):
+    return len(list(filter(lambda i: i < 5, [len(x) for x in words])))
+
+#3. Defina uma função stripVowels(s) que receba uma string e retire suas vogais
+def stripVowels(s):
+    return ''.join([x for x in s if x not in 'aeiouAEIOU'])
+
+#4. Defina uma função hideChars(s) que receba uma string, possivelmente contendo espaços, e que retorne
+# outra string substituindo os demais caracteres por '-', mas mantendo os espaços.
+def hideChars(s):
+    return ''.join(['-' if x is not ' ' else ' ' for x in s])
+
+#5. Defina uma função que receba um número n e retorne uma tabela de números de 1 a n e seus quadrados,
+#conforme os exemplos abaixo (você vai usar tuplas em Python):
+def genTabel(num):
+    return [(x,x*x) for x in num]
+
+#6. Defina uma função que receba uma lista de palavras e retorne uma string contendo o primeiro e o
+# último caracter de cada palavra da lista.
+def letras(lista):
+    return ''.join([x[0] + x[-1] for x in lista])
+
+#7. Defina uma função myZip(l1,l2) que reproduza o comportamento da função zip do Python:
+def myZip(l1,l2):
+    return [(l1[x], l2[x]) for x in range(0, len(l1))]
+
+#8. Escreva uma função enumerate(words) que numere cada palavra da lista recebida:
+def enumerate(words):
+    return [(words.index(x),x) for x in words]
+
+#9. Escreva uma função isBin(s) que verifique se a string recebida representa um número binário.
+def isBin(s):
+    return len(s) == len(''.join([x for x in s if x in '01']))
+
+#10. Escreva uma função bin2dec(digits), que receba uma lista de dígitos representando um
+# número binário e retorne seu equivalente em decimal
+def bin2dec(digits):
+    return int(''.join(str(x) for x in digits), 2)
+
+
+#main
+def main():
+    nomes = ['Idle', 'Chapman', 'Cleese', 'Palin', 'Jones']
+    sufixo = input("Digite o sufixo a ser aderido na lista: ")
+    print(addSuffix(sufixo, nomes))
+    print("\nNumero de palavras menores que 5:")
+    print(countShorts(nomes))
+    string = "Hello, my name is Python"
+    print("\nRetirando vogais da string %s:" %(string))
+    print(stripVowels(string))
+    print("\nEscondendo caracteres da string %s:" %(string))
+    print(hideChars(string))
+    lista_num = [1, 2, 3, 4, 5]
+    print(genTabel(lista_num))
+    print("\nPrintando primeira e ultima letra de cada palavra:")
+    print(letras(nomes))
+    print("\nZip")
+    l1 = [1,2,3]
+    l2 = [4,5,6]
+    print(myZip(l1,l2))
+    print("\nEnumerando lista")
+    print(enumerate(nomes))
+    binario = input("Digite um numero binario: ")
+    print(isBin(binario))
+    bin2 = input("\nDigite um número binário: ")
+    print(bin2dec(bin2))
+
+
+main()
