@@ -1,0 +1,92 @@
+Conversando com a ELIZA :)
+
+Hello. I am ELIZA. How can I help you?
+> yes
+
+You seem quite positive.
+> thank you
+
+We were discussing you, not me.
+> oh, okay
+
+I am not sure I understand you fully.
+> I will be more direct then
+
+You say you will be more direct then
+> yes
+
+You are sure?
+> yes
+
+I see.
+> What is your name?
+
+I am not interested in names.
+> Oh, ok
+
+Please go on.
+> What do you think about prolog?
+
+Why do you ask?
+> What do you think about prolog?
+
+Does that question interest you?
+> yes
+
+I understand.
+> Who is your father?
+
+Why are you concerned over my father?
+> just want to know
+
+What does that suggest to you?
+> suggest that ou were programmed by someone
+
+Do you feel strongly about discussing such things?
+> yes, i study things like this
+
+You seem quite positive.
+> you too
+
+Oh, i too.
+> haha
+
+I am not sure I understand you fully.
+> How is to be a program?
+
+What is it you really want to know?
+> If be a program is nice
+
+Do you think it is likely that be a program is nice?
+> maybe, but you can't do things by yourself
+
+You do not seem quite certain.
+> yeah, it is a great question about this
+
+I am not sure I understand you fully.
+
+---------------------------------------------------------
+Partes destacáveis:
+findkeywords([],[[memory,0],[none,0]]).
+findkeywords([H|T],[[H,I]|T1]) :- rules([[H,I]|_]), !, findkeywords(T,T1).
+findkeywords([_|T],T1) :- findkeywords(T,T1).
+
+O sistema usa de palavras "chave" para responder algumas perguntas, as funções
+buscam essas palavras utilizando o sistema Head and Tail para trabalhar com listas!
+
+Outra parte que podemos destacar é a utilização da tabela ASCII para verificar os
+caracteres. Para cada caractere precisamos ter uma resposta do sistema
+% my_char_type(+Char,?Type)
+%    Char is an ASCII code.
+%    Type is whitespace, punctuation, numeric, alphabetic, or special.
+
+my_char_type(46,period) :- !.
+my_char_type(X,alphanumeric) :- X >= 65, X =< 90, !.
+my_char_type(X,alphanumeric) :- X >= 97, X =< 123, !.
+my_char_type(X,alphanumeric) :- X >= 48, X =< 57, !.
+my_char_type(X,whitespace) :- X =< 32, !.
+my_char_type(X,punctuation) :- X >= 33, X =< 47, !.
+my_char_type(X,punctuation) :- X >= 58, X =< 64, !.
+my_char_type(X,punctuation) :- X >= 91, X =< 96, !.
+my_char_type(X,punctuation) :- X >= 123, X =< 126, !.
+my_char_type(_,special).
