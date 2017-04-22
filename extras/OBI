@@ -1,0 +1,86 @@
+%		OBI 2016 - Fase 1: modalidade iniciação
+	
+%			NOVA CERCA
+
+%Podemos perceber que temos um padrão de acordo com a imagem da página 4(verificar). Para cada poste que acrescentamos,
+%sabemos que outras 3 traves serão neccessárias. Logo, temos uma lógica de 3T para cada 1P. Assim, resolvemos a maioria
+%das questões, modificando apenas algumas coisas. 
+
+% 8.Quantas traves terá uma cerca com
+% seis postes?
+%
+% (A) 6
+% (B) 9
+% (C) 12
+% (D) 15
+% (E) 18
+
+novacerca(P,T):-
+	X is 3*(P-1),
+	T = X.
+
+%Usando trace, explicamos melhor o procedimento:
+
+%[trace]  ?- novacerca3(8,21,X).			          |	Chamamos a função no modo trace
+% Call: (8) novacerca3(8, 21, _9046) ? creep		|	A variável X que receberá o valor final considera-se _9046
+% Call: (9) _9292 is 3*(8-1) ? creep			      |	Salvamos o valor 3*[8(é o valor passado em P)-1] em _9292
+% Exit: (9) 21 is 3*(8-1) ? creep			          |	Verificamos que com 8 postes, temos 21 cercas e isso é verdade
+% Call: (9) 21=21 ? creep				                |	Verificamos se esse valor calculado é o valor passado em cercas
+% Exit: (9) 21=21 ? creep				                |	Sucesso!
+% Call: (9) _9046 is 21*5+8*10 ? creep			    |	Agora fazemos as contas: 21 cercas*5,00 + 8postes*10,00
+% Exit: (9) 185 is 21*5+8*10 ? creep			      |	O valor calculado é 185
+% Exit: (8) novacerca3(8, 21, 185) ? creep		  |	Logo, o valor solicitado é 185 que acabou de ser calculado
+% X = 185.						                          |	X é o resultado final
+
+%-------------------------------------------------------------------------------------------------
+
+% 9.Quantos postes são necessários para
+% uma cerca com 27 traves?
+%
+% (A) 9
+% (B) 10
+% (C) 11
+% (D) 12
+% (E) 13
+
+novacerca2(P,T):-
+    X is (T/3) +1,
+    P = X.
+
+% [trace]  ?- novacerca2(X,27).				      |	Chamamos a função no modo trace
+% Call: (8) novacerca2(_9042, 27) ? creep		|	Troca-se X que queremos saber por _9042
+% Call: (9) _9292 is 27/3+1 ? creep			    |	_9292 vai receber o resultado de 27/3 + 1
+% Exit: (9) 10 is 27/3+1 ? creep			      |	10 é o resultado da operação
+% Call: (9) _9042=10 ? creep				        |	Verificamos se _9042 que queremos saber é 10
+% Exit: (9) 10=10 ? creep				            |	Realmente, o valor que procuravámos era esse
+% Exit: (8) novacerca2(10, 27) ? creep			|	Então são 10 em P(postes) e 27 em T(traves)!!!
+% X = 10.						                        |	O resultado que procurávamos era 10
+
+%--------------------------------------------------------------------------------------------------
+
+% 10.Cada poste custa R$ 10,00 e cada
+% trave custa R$ 5,00. Qual o custo de uma cerca
+% com oito postes?
+%
+% (A) R$ 80,00
+% (B) R$ 105,00
+% (C) R$ 120,00
+% (D) R$ 185,00
+% (E) R$ 215,00
+
+novacerca3(P,T, Y):-
+    X is 3*(P-1),
+    T = X,
+    Y is X*5 + P*10.
+
+% [trace]  ?- novacerca3(8,Y,X).			          |	Chamamos a função no modo trace. Lembrando que só temos a quantidade de postes
+% Call: (8) novacerca3(8, _584, _586) ? creep		|	Precisamos calcular quantas traves temos para depois saber o resultado final
+% Call: (9) _854 is 3*(8-1) ? creep			        |	Calculamos 3*[8(postes)-1] e salvamos em _854
+% Exit: (9) 21 is 3*(8-1) ? creep			          |	Verificamos que o valor é 21
+% Call: (9) _584=21 ? creep				              |	Esse valor é o valor de traves que chamamos de Y
+% Exit: (9) 21=21 ? creep				                |	Logo, temos 21 traves e 8 postes
+% Call: (9) _586 is 21*5+8*10 ? creep			      |	Assim, aplicamos a lógica da questão fazendo Y(traves)*5 + 8(postes)*10
+% Exit: (9) 185 is 21*5+8*10 ? creep			      |	Logo, descobrimos o valor 185
+% Exit: (8) novacerca3(8, 21, 185) ? creep		  |	Então Y(traves é 21) e X(valor final) é 185
+% Y = 21,						                            |	Logo, calculamos quantas traves temos a partir de 8 postes. 21 cercas
+% X = 185.				                              |	E calculamos o valor final após descobrir quantas traves. Valor: 185
