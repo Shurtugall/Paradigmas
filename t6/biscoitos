@@ -1,0 +1,115 @@
+#include <iostream>
+#include <vector>
+#include <iterator>
+#include <string>
+#include <ctime>
+#include <time.h>
+#include <cstdlib>
+#include <algorithm>
+
+#define PI 3.14;
+#define preco_maior 4.00
+#define preco_medio 2.50
+#define preco_menor 0.50
+using namespace std;
+
+class Biscoitos{
+protected:
+    float tamanho;
+public:
+    get_tamanho(){
+        return tamanho;
+    }
+};
+
+class Circulo: public Biscoitos{
+public:
+    Circulo(float r){
+        tamanho = r*r*PI;
+    }
+};
+
+class Triangulo: public Biscoitos{
+public:
+    Triangulo(int b, int h){
+        tamanho = (b*h)/2;
+    }
+};
+
+class Retangulo: public Biscoitos{
+public:
+    Retangulo(float b, float h){
+        tamanho = b*h;
+    }
+};
+
+bool cmpTamanho(Biscoitos b1, Biscoitos b2){
+    return b1.get_tamanho() > b2.get_tamanho();
+}
+
+void imprime_tamanho(vector<Biscoitos> biscoitos){
+    cout << "Tamanho dos biscoitos em cm2: " << endl;
+    for(vector<Biscoitos>::iterator it = biscoitos.begin(); it !=biscoitos.end(); it++){
+        cout  << "   " << it->get_tamanho() << "cm2" << endl;
+    }
+}
+
+void imprime_total(vector<Biscoitos> biscoitos){
+    int cont_grande = 0;
+    int cont_medio = 0;
+    int cont_pequeno = 0;
+    float total = 0;
+    for(vector<Biscoitos>::iterator it = biscoitos.begin(); it !=biscoitos.end(); it++){
+        if(it->get_tamanho() > 100){
+            total += preco_maior;
+            cont_grande++;
+        }
+        else if(it->get_tamanho() < 30){
+            total += preco_menor;
+            cont_pequeno++;
+        }
+        else{
+            total += preco_medio;
+            cont_medio++;
+        }
+    }
+    cout << endl << "Biscoitos grandes: " << cont_grande << endl;
+    cout << "Valor arrecadado com biscoitos grandes: " << (cont_grande*preco_maior) << endl << endl;
+    cout << "Biscoitos medios: " << cont_medio << endl;
+    cout << "Valor arrecadado com biscoitos medios: " << (cont_medio*preco_medio) << endl << endl;
+    cout << "Biscoitos pequenos: " << cont_pequeno << endl;
+    cout << "Valor arrecadado com biscoitos pequenos: " << (cont_pequeno*preco_menor) << endl << endl;
+    cout << "Valor total: " << total << endl;
+
+}
+
+int main(){
+    int N;
+    std::cout << "Digite a quantidade total de biscoitos" << std::endl;
+    std::cin >> N;
+    std::vector<Biscoitos> biscoitos;
+    int i, tipo;
+    srand(time(0));
+    while(i < N){
+        tipo = rand()%3;
+        if(tipo == 0){
+            auto raio = rand()%5 + 3;
+            biscoitos.push_back(Circulo(raio));
+        }
+        else if(tipo == 1){
+            auto base = rand()%5 + 3;
+            auto altura = rand()%7 + 4;
+            biscoitos.push_back(Triangulo(base, altura));
+        }
+        else if(tipo == 2){
+            auto base = rand()%6 + 3;
+            auto altura = rand()%4 + 2;
+            biscoitos.push_back(Retangulo(base, altura));
+        }
+        i++;
+    }
+    sort(biscoitos.begin(), biscoitos.end(), cmpTamanho);
+    imprime_tamanho(biscoitos);
+    imprime_total(biscoitos);
+    return 0;
+}
