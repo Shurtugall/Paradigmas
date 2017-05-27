@@ -30,12 +30,12 @@ importando a biblioteca:<br>
 **#include <math.h>**
 ```
 #include <math.h>
- #include <stdio.h>
- int main(void)
- {
-   for(int i = 1; i < 5; i++)
-     printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
-   return 0;
+#include <stdio.h>
+int main(void)
+{
+  for(int i = 1; i < 5; i++)
+    printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
+  return 0;
  ```
 
 A função **pow** é uma função especifica da bilbioteca math.h que foi importada para o nosso código
