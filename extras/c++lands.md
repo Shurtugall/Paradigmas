@@ -1,9 +1,9 @@
 # INCLUDE FORT
 
-*Um forte espetacular, dizem que possui um conjunto de bibliotecas em seu interior que até hoje nenhum ser 
+*"Um forte espetacular, dizem que possui um conjunto de bibliotecas em seu interior que até hoje nenhum ser 
 humano conseguiu contar quantos livros há naquele local. Os grandes estudiosos vivem apenas para apreciar 
 a vastidão de conhecimento que existe dentro desse forte blindado de conhecimento. Todos remetem a essa 
-velha construção em algum momento de suas vidas. Afinal, conhecimento nunca é demais.* <br>
+velha construção em algum momento de suas vidas. Afinal, conhecimento nunca é demais."* <br>
 
 ## Função
 
@@ -27,14 +27,14 @@ Por exemplo, a famosa biblioteca que muito utilizamos:<br>
 Ou até mesmo se precisamos do vasto conhecimento dado pela matemática podemos utilizar facilmente suas funções, 
 importando a biblioteca:<br>
 
+```
 **#include <math.h>**
- #include <math.h>
  #include <stdio.h>
  int main(void)
  {
    for(int i = 1; i < 5; i++)
      printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
-   return 0;
+   return 0;```
 
 ## Apenas bibliotecas podem ser importadas?
 
