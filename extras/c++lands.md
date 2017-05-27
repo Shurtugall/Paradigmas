@@ -28,15 +28,22 @@ Ou até mesmo se precisamos do vasto conhecimento dado pela matemática podemos 
 importando a biblioteca:<br>
 
 ### #include <math.h>
-- #include <math.h>
-- #include <stdio.h>
-- int main(void)
-- {
--   for(int i = 1; i < 5; i++)
--     printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
--   return 0;
+ #include <math.h>
+ #include <stdio.h>
+ int main(void)
+ {
+   for(int i = 1; i < 5; i++)
+     printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
+   return 0;
 
+## Apenas bibliotecas podem ser importadas?
 
+Não, podemos importar no nosso código outros códigos. Sim, nem todos os livros contém tudo que você precisa, certo?
+Assim, podemos pegar vários códigos e importa-los a um código main. Como? Muito simples. A mesma função include, 
+mas o nome do código está entre “ ”. Assim, podemos usar funções de outros códigos em nosso código main, como se
+fossem bibliotecas feitas por nós mesmos. Incrível não?
+
+### #include “codigo.h”
   
 
 
