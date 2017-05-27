@@ -48,7 +48,24 @@ mas o nome do código está entre “ ”. Assim, podemos usar funções de outr
 fossem bibliotecas feitas por nós mesmos. Incrível não?
 
 **#include “codigo.h”**
-  
+ 
+Por exemplo, podemos ter um código chamado "add.cpp" apenas com uma função
 
-
-
+```
+int add(int x, int y)
+{
+    return x + y;
+}
+ ```
+ E podemos importar esse código para nosso arquivo main, utilizando a função implementeada em " add.cpp"
+ 
+```
+#include <iostream>
+#include "add.h"
+ 
+int main()
+{
+    std::cout << "The sum of 3 and 4 is " << add(3, 4) << std::endl;
+    return 0;
+}
+```
