@@ -22,12 +22,20 @@ o nome da biblioteca a ser chamada.<br>
 
 Por exemplo, a famosa biblioteca que muito utilizamos:<br>
 
-### #include <iostream>
+### #include <iostream'>
 
 Ou até mesmo se precisamos do vasto conhecimento dado pela matemática podemos utilizar facilmente suas funções, 
 importando a biblioteca:<br>
 
 ### #include <math.h>
+- #include <math.h>
+- #include <stdio.h>
+- int main(void)
+- {
+-   for(int i = 1; i < 5; i++)
+-      printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
+-   return 0;
+
 
   
 
