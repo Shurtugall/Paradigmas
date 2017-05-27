@@ -27,8 +27,9 @@ Por exemplo, a famosa biblioteca que muito utilizamos:<br>
 Ou até mesmo se precisamos do vasto conhecimento dado pela matemática podemos utilizar facilmente suas funções, 
 importando a biblioteca:<br>
 
-```
 **#include <math.h>**
+```
+#include <math.h>
  #include <stdio.h>
  int main(void)
  {
@@ -36,6 +37,8 @@ importando a biblioteca:<br>
      printf("pow(3.2, %d) = %lf\n", i, pow(3.2, i));  
    return 0;
  ```
+
+A função **pow** é uma função especifica da bilbioteca math.h que foi importada para o nosso código
 
 ## Apenas bibliotecas podem ser importadas?
 
