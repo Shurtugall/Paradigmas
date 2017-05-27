@@ -72,7 +72,7 @@ int main()
 }
 ```
 
-Após esta explicação, o velho meistre coçando sua longa barba diz: sempre que buscar conhecimento, volte aqui no forte. Tudo que precisar estará aqui e eu ajudarei sempre que possível. Se ainda lhe surgir dúvidas sobre como funciona nossas bibliotecas, procure
+Após esta explicação, o velho meistre acariciando sua longa barba diz: sempre que buscar conhecimento, volte aqui no forte. Tudo que precisar estará aqui e eu ajudarei sempre que possível. Se ainda lhe surgir dúvidas sobre como funciona nossas bibliotecas, procure
 nosso guia que está sempre sentado em uma cadeira na entrada do forte. Uma pena que ele está sempre cochilando, mas dê uma insistida no assunto que ele lhe ajudará. Aqui está a localização deste guia:
 
 [Guia do forte](http://www.cplusplus.com/)<br>
