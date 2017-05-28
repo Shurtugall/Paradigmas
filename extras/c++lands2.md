@@ -71,3 +71,5 @@ O velho já cansado de tanto explicar, senta em sua cadeira no ponto mais alto d
 linguagem C++. Se ainda surgir dúvidas sobre mim, aqui está um volume completo da minha história. Até mais!
 
 - [Bjarne](http://www.stroustrup.com/)
+
+- [The C++ Lands](https://drive.google.com/file/d/0B3DUpmL8tTt8N2JIRklJeTIxYW8/view)
