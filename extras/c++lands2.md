@@ -70,4 +70,4 @@ O velho já cansado de tanto explicar, senta em sua cadeira no ponto mais alto d
 é aqui que eu coordeno tudo, afinal essa torre foi criada por mim. Meu nome é Bjarne Stroustrup e eu desenvolvi a 
 linguagem C++. Se ainda surgir dúvidas sobre mim, aqui está um volume completo da minha história. Até mais!
 
--[Bjarne](http://www.stroustrup.com/)
+- [Bjarne](http://www.stroustrup.com/)
