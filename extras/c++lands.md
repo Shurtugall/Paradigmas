@@ -77,3 +77,4 @@ nosso guia que está sempre sentado em uma cadeira na entrada do forte. Uma pena
 
 [Guia do forte](http://www.cplusplus.com/)<br>
 
+[The C++ Lands](https://drive.google.com/file/d/0B3DUpmL8tTt8N2JIRklJeTIxYW8/view)
