@@ -31,7 +31,7 @@ podemos vê-los no hall da fama na entrada do saguão principal da torre, como: 
 Ele possui diversos outras honoráveis menções, que podem ser conferidas no nosso índice de busca, 
 se quiser mais aqui está o livro:
 
-- [Bibliografia](http://www.stroustrup.com/bio.html)
+- [Biografia](http://www.stroustrup.com/bio.html)
 
 ## C++
 
