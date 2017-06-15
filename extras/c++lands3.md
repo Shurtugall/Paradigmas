@@ -89,3 +89,7 @@ int main(){
 }
 ```
 Podemos perceber a diferença. Temos acesso a área do círculo, pois esta é pública, mas ao tentarmos acessar o atributo X, somos barrados, pois ser do tipo private.
+
+Se existe alguma dúvida a respeito de heranças e como elas funcionam, faça uma visita a Floresta da Herança que encontra-se no extremo oeste do nosso mapa, mas aqui está um caminho que eu mesmo descobri que pode leva-lo até a floresta em questão de segundos!
+
+- [Inheritance Forest](https://github.com/Shurtugall/Paradigmas/blob/master/extras/c%2B%2Blands4.md)
