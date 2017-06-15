@@ -43,7 +43,25 @@ dão acesso a estes dados.
 
 Ao utilizarmos as formas protected, tornamos os atributos e métodos visíveis as classes derivadas, que utilizam do mesmo atributo da classe principal. Por exemplo, se tivermos uma classe principal chamada pessoa, e colocarmos o atributo nome como protected, qualquer classe que criarmos que herdar da classe pessoa, poderá utilizar seus atributos. Uma classe estudante também é considerada uma pessoa, e assim também possui um nome. Fazemos isso para reaproveitar partes do código, e deixa-lo mais organizado. Vale destacar que apenas classes derivadas conseguem herdar os atributos, classes que não possuem nenhum tipo de herança não encontram os devidos atributos. As famílias da cidadela eram bem restritas.
 
-imagem
+```
+class Person{
+protected:
+  string name;
+pulbic:
+  Person();
+  ...
+  
+};
+
+class Student: public Person{
+  string course;
+public:
+  Student(){
+  ...
+  name = "";      //OK!
+  }
+};
+```
 
 Podemos perceber que a classe Student herda o atributo da classe Person, e pode utilizar esse atributo como achar necessário, devido ao fato de ser protected.
 
@@ -51,7 +69,23 @@ Podemos perceber que a classe Student herda o atributo da classe Person, e pode 
 
 O próprio nome já diz. Por ser público, todos possuem acesso. Podemos buscar dados que forem públicos de uma classe mesmo fora dela. Podemos buscar esses valores nos atributos da classe e podemos usá-los nas nossas funções, manipulando como quisermos. Podemos chamar métodos públicos na nossa função main que iremos obter todos os resultados possíveis.
 
+```
+class Circle{
+private:
+  float x;
+  float y;
+  float z;
+public:
+  float area(){
+    return 3.14168*r*r;
+  }
+};
 
-imagem
-
+int main(){
+  Circle c;
+  
+  c.area();     //OK! area é publico, temos acesso
+  c.x = 0;      //ERRO! x é privado, não temos acesso
+}
+```
 Podemos perceber a diferença. Temos acesso a área do círculo, pois esta é pública, mas ao tentarmos acessar o atributo X, somos barrados, pois ser do tipo private.
