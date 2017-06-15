@@ -51,6 +51,7 @@ Podemos perceber que a classe Student herda o atributo da classe Person, e pode 
 
 O próprio nome já diz. Por ser público, todos possuem acesso. Podemos buscar dados que forem públicos de uma classe mesmo fora dela. Podemos buscar esses valores nos atributos da classe e podemos usá-los nas nossas funções, manipulando como quisermos. Podemos chamar métodos públicos na nossa função main que iremos obter todos os resultados possíveis.
 
+
 imagem
 
 Podemos perceber a diferença. Temos acesso a área do círculo, pois esta é pública, mas ao tentarmos acessar o atributo X, somos barrados, pois ser do tipo private.
