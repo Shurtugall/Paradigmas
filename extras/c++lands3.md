@@ -45,7 +45,7 @@ Ao utilizarmos as formas protected, tornamos os atributos e métodos visíveis a
 
 ```
 class Person{
-protected:
+**protected**:
   string name;
 pulbic:
   Person();
@@ -58,7 +58,7 @@ class Student: public Person{
 public:
   Student(){
   ...
-  name = "";      //OK!
+  **name = "";      //OK!**
   }
 };
 ```
