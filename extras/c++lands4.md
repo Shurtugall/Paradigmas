@@ -26,8 +26,8 @@ class Pinheiro: public Gimnospermas{
 public:
     Pinheiro(){
         atibuto1 = "folhas";
-        tamanho = 10;
-        idade = 100
+        tamanho = 100;
+        idade = 10;
     }
 };
 ```
