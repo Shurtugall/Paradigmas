@@ -1,0 +1,12 @@
+Para executar o programa, utilize o compile.sh(já está alterado para que compile naturalmente)
+
+Utilize na linha de comando: sh compile.sh
+
+Digite o titulo e clique em set title que ele será setado logo acima do browser e será reservado para o html mais tarde.
+
+Digite e altere o que for necessário dentro do browser, que recebe ID e Label.
+Após finalizar tudo, se quiser, clique em export que será salvo seu arquivo em .csv
+
+Após isso, clique em generate que o código em html será gerado.
+
+Abra o index.html que será possível abrir o programa gerado dentro de seu navegador

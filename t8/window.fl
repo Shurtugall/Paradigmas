@@ -1,0 +1,73 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0303 
+header_name {.h} 
+code_name {.cxx}
+class UserInterface {open
+} {
+  Function {UserInterface()} {open
+  } {
+    Fl_Window w {
+      label {Gerador de aplicações} open
+      protected xywh {583 41 520 530} type Double visible
+    } {
+      Fl_Input inputTitle {
+        label Title
+        protected xywh {80 34 360 24}
+      }
+      Fl_Input inputLabel {
+        label Label
+        protected xywh {80 58 360 24}
+      }
+      Fl_Button botao_clear {
+        label Clear
+        protected xywh {25 115 100 25}
+      }
+      Fl_Button botao_update {
+        label Update
+        protected xywh {147 115 100 25}
+      }
+      Fl_Button botao_delete {
+        label Delete
+        protected xywh {270 115 100 25}
+      }
+      Fl_Button botao_insert {
+        label Insert
+        protected xywh {394 115 100 25}
+      }
+      Fl_Box Title_box {
+        label {Gerador de aplicações}
+        xywh {132 12 255 16} labelfont 1 labelsize 22
+      }
+      Fl_Browser browser {
+        protected xywh {25 238 470 277} type Hold
+      }
+      Fl_Input inputId {
+        label Id
+        protected xywh {81 83 360 24}
+      }
+      Fl_Button botao_export {
+        label Export
+        xywh {150 175 100 25}
+      }
+      Fl_Button botao_generate {
+        label Generate
+        xywh {270 175 100 25}
+      }
+      Fl_Button botao_import {
+        label Import
+        xywh {25 175 100 25}
+      }
+      Fl_Input inputFile {
+        label {File name}
+        xywh {81 145 360 24}
+      }
+      Fl_Button botao_seta_titulo {
+        label {Set Title} selected
+        xywh {395 175 100 25}
+      }
+      Fl_Box caixa_titulo {
+        xywh {115 209 300 20}
+      }
+    }
+  }
+} 
