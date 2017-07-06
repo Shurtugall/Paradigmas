@@ -1,7 +1,7 @@
 # Paradigmas de Progamação
 <p>
 Diretório de Paradigmas de programação ELC117 2017A <br>
-Github da professora: [Andrea Schwertner Charão](https://github.com/AndreaInfUFSM/elc117-2017a) <br>
+Professora: Andrea Schwertner Charão
 Sala: (334) Centro de tecnologias, UFSM <br>
 </p>
 
